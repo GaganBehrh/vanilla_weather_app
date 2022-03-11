@@ -12,7 +12,7 @@
 <div class="container">
     <div class="weather-app-wrapper">
     <div class="weather-app">
-        
+        <!--form element begins-->
         <form id="search" class="mb-3">
         <div class="row" >
             <div class="col-9">
@@ -24,7 +24,9 @@
                 </div>
             </div>     
             </form>
+        <!--form element ends-->
         
+        <!--Overview starts-->
      <div class="overview">   
     <h1 id="city">New York</h1>
     <ul>
@@ -35,7 +37,11 @@
         </li>
     </ul>
       </div>  
+       <!--Overview ends-->
+        
+        <!--row starts-->
         <div class="row">   
+            <!--col-1 starts-->
         <div class="col-6">
         <div class="clearfix weather-temperature">   
          <img src="" alt="sunny" id="icon" class="float-left"/><strong id="temperature">12</strong><small class="unit"> <sup>o</sup><a href="#" id="celsius">C|<sup>o</sup><a href="#" id="fahrenheit">F</a></small>
@@ -43,18 +49,22 @@
             </div>
           <div class="col-6">
               <ul>
-            
-                  <li> Humidity:<span id="humidity"/>77Km/h</li>
+             <li>Humidity:<span id="humidity"/>77Km/h</li>
                    <li >Wind:<span id="wind">2Km/h</li>
               </ul>
           </div>      
-          </div>
-       
-   </div>
-     <small> <a href="">Open-source code</a> by Gagan</small>
+        </div>
+        
+            <!--row ends-->
+        <div id="forecast">  
+        </div>
+            
+    </div>
+     <small> <a href="">Open-source code</a>by Gagan</small>
 </div>   
     </div>
     <script type="text/javascript" src="src/script.js"></script>
+    </div>
 </body>
     
 </html>

@@ -14,6 +14,28 @@ function formatdate(timestamp){
     let day=days[date.getDay()];
     return `${day} ${hours}:${minutes}`;
 }
+
+function displayforecast(){
+  let forecast=document.getElementById("forecast");
+    let forecastHTML=`<div class="row">`;
+  let days=["Sun","Mon","Tue","Wed", "Thu","Fri","Sat"];
+ days.forEach(function(day){
+forecastHTML+=`
+<div class="col-2">
+                    <div id="day">${day}</div>
+                    <img src="" alt>
+                    <div id="max-temp">20<sup>o</sup>C
+                        <span id="min-temp">18<sup>o</sup>C</span>
+                    </div>
+                </div>                  
+</div>
+`;
+       forecastHTML+=`</div>`;
+        forecast.innerHTML+=forecastHTML;
+
+});
+    
+}
 function displayTemperature(response){
     console.log(response.data);
     console.log(response.data);
@@ -60,6 +82,9 @@ let temperature=document.getElementById("temperature");
     
     temperature.innerHTML=Math.round(celsiustemp);  
 }
+
+displayforecast();
+
 let celsiustemp=null;
 let form=document.getElementById("search");
 form.addEventListener("submit",handleSubmit);
