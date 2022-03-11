@@ -29,17 +29,18 @@ function displayforecast(response){
     //let days=["Sun","Mon"];
      let forecastHTML=`<div class="row">`;
     //let days=["Sun","Mon","Tue","Wed","Thu","Fri"];
-forecastresponse.forEach(function(forecastresponse){
+forecastresponse.forEach(function(forecastresponse, index){
+    if(index<6){
     forecastHTML+=
 `<div class="col-2">
         <div id="day">${formatDay(forecastresponse.dt)}</div>
         <img src="http://openweathermap.org/img/wn/${
             forecastresponse.weather[0].icon}@2x.png" width="60px" alt>
         <div>
-        <span id="max-temp">${forecastresponse.temp.max}<sup>o</sup>C</span>
-        <span id="min-temp">${forecastresponse.temp.min}<sup>o</sup>C</span></div>
+        <span id="max-temp">${Math.round(forecastresponse.temp.max)}<sup>o</sup>C</span>
+        <span id="min-temp">${Math.round(forecastresponse.temp.min)}<sup>o</sup>C</span></div>
 </div>`;    
-});
+}});
 
     forecastHTML+=`</div>`; 
      forecast.innerHTML+=forecastHTML;
