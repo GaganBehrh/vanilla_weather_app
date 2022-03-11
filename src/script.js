@@ -14,28 +14,25 @@ function formatdate(timestamp){
     let day=days[date.getDay()];
     return `${day} ${hours}:${minutes}`;
 }
+
 function displayforecast(){
   let forecast=document.getElementById("forecast");
-    let forecastHTML=``;
+    
     //let days=["Sun","Mon"];
-  let days=["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
- days.forEach(function(day){
-forecastHTML=`<div class="row">
-
-<div class="col-2">
+     let forecastHTML=`<div class="row">`;
+    let days=["Sun","Mon","Tue","Wed","Thu","Fri"];
+days.forEach(function(day){
+    forecastHTML+=
+`<div class="col-2">
         <div id="day">${day}</div>
         <img src="" alt>
         <div id="max-temp">20<sup>o</sup>C
         <span id="min-temp">18<sup>o</sup>C</span></div>
-</div>                  
-
-</div>`;
-       forecast.innerHTML+=forecastHTML;
-    // forecastHTML+=`</div>`;
-
+</div>`;    
 });
-     
-        forecast.innerHTML+=forecastHTML;
+
+    forecastHTML+=`</div>`; 
+     forecast.innerHTML+=forecastHTML;
 }
 function displayTemperature(response){
     console.log(response.data);
