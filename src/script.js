@@ -108,8 +108,8 @@ let celsiustemp=null;
 let form=document.getElementById("search");
 form.addEventListener("submit",handleSubmit);
 
-let fahrenheit=document.getElementById("fahrenheit");
-fahrenheit.addEventListener("click", showFahrenheitTemperature);
+//let fahrenheit=document.getElementById("fahrenheit");
+//fahrenheit.addEventListener("click", showFahrenheitTemperature);
 
 let celsius=document.getElementById("celsius");
 celsius.addEventListener("click",showCelsiusTemperature);
