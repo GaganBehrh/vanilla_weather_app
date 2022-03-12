@@ -43,7 +43,7 @@ forecastresponse.forEach(function(forecastresponse, index){
 }});
 
     forecastHTML+=`</div>`; 
-     forecast.innerHTML+=forecastHTML;
+     forecast.innerHTML=forecastHTML;
 }
 
 
