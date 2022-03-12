@@ -117,5 +117,5 @@ form.addEventListener("submit",handleSubmit);
 //let fahrenheit=document.getElementById("fahrenheit");
 //fahrenheit.addEventListener("click", showFahrenheitTemperature);
 
-let celsius=document.getElementById("celsius");
-celsius.addEventListener("click",showCelsiusTemperature);
+//let celsius=document.getElementById("celsius");
+//celsius.addEventListener("click",showCelsiusTemperature);

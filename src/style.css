@@ -76,3 +76,7 @@ font-size: small;
 font-size: small;
 opacity:0.6;    
 }
+#last-link{
+    text-decoration-line: none;
+    color:#689fe8;
+}
