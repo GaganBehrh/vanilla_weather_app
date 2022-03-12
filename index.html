@@ -28,7 +28,7 @@
         
         <!--Overview starts-->
      <div class="overview">   
-    <h1 id="city">New York</h1>
+         <h1 id="city"><b>New York</b></h1>
     <ul>
     <li id="date">
         Friday 05:00
@@ -40,31 +40,76 @@
        <!--Overview ends-->
         
         <!--row starts-->
-        <div class="row">   
+        <div class="row" id="first-row">   
             <!--col-1 starts-->
         <div class="col-6">
         <div class="clearfix weather-temperature">   
-         <img src="https://icons.iconarchive.com/icons/custom-icon-design/weather/256/Sunny-icon.png" alt="sunny" id="icon" class="float-left"/>
-            <strong id="temperature">20</strong>
+         <img src="http://openweathermap.org/img/wn/04d@2x.png" alt="sunny" id="icon" class="float-left"/>
+            <strong id="temperature">15</strong>
             <small class="unit"> <sup>o</sup>
                 <a href="#" id="celsius">C</a></small>
           </div>
             </div>
           <div class="col-6">
               <ul>
-             <li>Humidity:<span id="humidity"/>77Km/h</li>
-                  <li>Wind:<span id="wind">2Km/h</span></li>
+                  <li><b>Humidity</b> : <span id="humidity"/> 77Km/h</li>
+                  <li><b>Wind </b>: <span id="wind"> 2Km/h</span></li>
               </ul>
           </div>      
         </div>
-        
             <!--row ends-->
+    
         <div id="forecast">  
-        </div>
+            <div class="row">
+            <div class="col-2">
+        <div id="day">Fri</div>
+        <img src="http://openweathermap.org/img/wn/04d@2x.png" width="60px" alt>
+        <div>
+        <span id="max-temp">17<sup>o</sup>C</span>
+        <span id="min-temp">16<sup>o</sup>C</span></div>
+</div>
+               <div class="col-2">
+        <div id="day">Sat</div>
+        <img src="https://openweathermap.org/img/wn/01d@2x.png" width="60px" alt>
+        <div>
+        <span id="max-temp">20<sup>o</sup>C</span>
+        <span id="min-temp">18<sup>o</sup>C</span></div>
+</div>
+      
+           <div class="col-2">
+        <div id="day">Sun</div>
+        <img src="http://openweathermap.org/img/wn/10d@2x.png" width="60px" alt>
+        <div>
+        <span id="max-temp">16<sup>o</sup>C</span>
+        <span id="min-temp">15<sup>o</sup>C</span></div>
+</div>
+           <div class="col-2">
+        <div id="day">Mon</div>
+        <img src="http://openweathermap.org/img/wn/10d@2x.png" width="60px" alt>
+        <div>
+        <span id="max-temp">15<sup>o</sup>C</span>
+        <span id="min-temp">17<sup>o</sup>C</span></div>
+</div>
+                <div class="col-2">
+        <div id="day">Tue</div>
+        <img src="http://openweathermap.org/img/wn/01d@2x.png" width="60px" alt>
+        <div>
+        <span id="max-temp">20<sup>o</sup>C</span>
+        <span id="min-temp">18<sup>o</sup>C</span></div>
+</div>
+                <div class="col-2">
+        <div id="day">Wed</div>
+        <img src="http://openweathermap.org/img/wn/01d@2x.png" width="60px" alt>
+        <div>
+        <span id="max-temp">21<sup>o</sup>C</span>
+        <span id="min-temp">19<sup>o</sup>C</span></div>
+</div>
+            </div>
             
     </div>
+          </div>
      <small> <a href="https://github.com/GaganBehrh/vanilla_weather_app.git" target="_blank" id="last-link">Open-source code</a> by Gagan</small>
-</div>   
+  
     </div>
     <script type="text/javascript" src="src/script.js"></script>
     </div>
