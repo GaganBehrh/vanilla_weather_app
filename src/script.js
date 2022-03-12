@@ -1,6 +1,7 @@
+
+// function for calculation of time and date next to search box
 function formatdate(timestamp){
     //calculate time and date
-    
     let date=new Date(timestamp);
     let hours=date.getHours();
     if(hours<10){
@@ -15,12 +16,14 @@ function formatdate(timestamp){
     return `${day} ${hours}:${minutes}`;
 }
 
+//function for calculation for forecast day calculataion
 function formatDay(timestamp){
     let date= new Date(timestamp*1000);
     let day=date.getDay();
     let days=["Sun","Mon","Tue","Wed", "Thu","Fri","Sat"];
     return days[day];
 }
+// function to disply forecast and html integrated
 function displayforecast(response){
     let forecastresponse=response.data.daily;
     console.log(forecastresponse);
@@ -46,7 +49,7 @@ forecastresponse.forEach(function(forecastresponse, index){
      forecast.innerHTML=forecastHTML;
 }
 
-
+//function to get api from openweathermap api for the forecats with lat and long coming from cityapi
 function getForecast(coord){
     console.log(coord);
     let apikey="6b80ac76c22967a49fc41e880624c2ce";
@@ -54,6 +57,8 @@ function getForecast(coord){
     console.log(apiUrl);
     axios.get(apiUrl).then(displayforecast);
 }
+
+
 function displayTemperature(response){
     console.log(response.data);
     celsiustemp=response.data.main.temp;
@@ -71,10 +76,10 @@ let wind=document.getElementById("wind");
     let date=document.getElementById("date");
 date.innerHTML=formatdate(response.data.dt*1000);
     let icon=document.getElementById("icon");
-    icon.setAttribute("src",`http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);   
-    
+    icon.setAttribute("src",`http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);       
 getForecast(response.data.coord);
 }
+// function to get the cityapi from openweathermap
 
 function search(city){
 let apikey="6b80ac76c22967a49fc41e880624c2ce";
@@ -82,28 +87,29 @@ let apiUrl =`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${a
 axios.get(apiUrl).then(displayTemperature);
 }
 
+// function to get the value of entered city
 function handleSubmit(event){
     event.preventDefault();
     let cityentered=document.getElementById("cityentered");
     search(cityentered.value);
 }
-
+/*
 function showFahrenheitTemperature(event){
     event.preventDefault();
 let temperature=document.getElementById("temperature");
     let fahrenheitTemperature=(celsiustemp*9)/5+32;
     temperature.innerHTML=Math.round(fahrenheitTemperature);
     
-}
+}*/
+// function to add celsius temp
 function showCelsiusTemperature(event){
     event.preventDefault();
 let temperature=document.getElementById("temperature");
-    
     temperature.innerHTML=Math.round(celsiustemp);  
 }
 
 
-
+// variable declaration and addevent listened function calling
 let celsiustemp=null;
 let form=document.getElementById("search");
 form.addEventListener("submit",handleSubmit);
